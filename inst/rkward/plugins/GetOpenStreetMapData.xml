@@ -1,0 +1,50 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="GetOpenStreetMapData.js" />
+	<help file="GetOpenStreetMapData.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Get Open Street Map Data">
+		<column id="clm_fDSDSOSMUR">
+			<frame label="Data Source" id="frm_DataSorc">
+				<input label="OpenStreetMap URL (e.g., ...#map=12/19.05/-98.27)" id="url_input" required="true" />
+			</frame>
+			<row id="row_fDDXD50001">
+				<frame label="Dimensions" id="frm_Dimensns">
+					<spinbox label="X Distance (meters)" id="x_dist" initial="5000" min="1" />
+					<spinbox label="Y Distance (meters)" id="y_dist" initial="5000" min="1" />
+				</frame>
+				<frame label="Output Size" id="frm_OutputSz">
+					<dropdown id="size_preset" label="Preset output size">
+						<option label="A4" value="A4" checked="true" />
+						<option label="A0" value="A0" />
+						<option label="A1" value="A1" />
+						<option label="A2" value="A2" />
+						<option label="A3" value="A3" />
+						<option label="A5" value="A5" />
+						<option label="A6" value="A6" />
+						<option label="Small Poster" value="small_poster" />
+						<option label="Medium Poster" value="medium_poster" />
+						<option label="Large Poster" value="large_poster" />
+					</dropdown>
+					<input label="Custom size (e.g., c(300, 300))" id="size_custom" />
+				</frame>
+			</row>
+			<saveobject label="Save sf object as" checkable="true" checked="true" initial="map" id="main_save_obj" />
+		</column>
+	</dialog>
+</document>

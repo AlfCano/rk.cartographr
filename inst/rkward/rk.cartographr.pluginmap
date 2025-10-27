@@ -1,0 +1,97 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="GetOpenStreetMapData"
+	id="GetOpenStreetMapData_rkward"
+	po_id="GetOpenStreetMapData_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.cartographr"
+		shortinfo="An RKWard plugin package for fetching and plotting OpenStreetMap data using the 'cartographr' library."
+		longinfo="An RKWard plugin package for fetching and plotting OpenStreetMap data using the 'cartographr' library."
+		version="0.1.0"
+		releasedate="2025-10-26"
+		url="https://github.com/AlfCano/rk.cartographr"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano Robles"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_GtOpnStrtMpDtPltCrtgrphrM"
+			label="Plot Cartographr Map"
+			type="standard"
+			file="plugins/PlotCartographrMap.xml"
+		>
+		</component>
+		<component
+			id="cmp_GtOpnStrtMpDtGtOpnStrtMpD"
+			label="Get Open Street Map Data"
+			type="standard"
+			file="plugins/GetOpenStreetMapData.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="plots"
+			label="Plots"
+		>
+			<menu
+				id="OpenStreetMap"
+				label="Open Street Map"
+			>
+				<entry
+					component="cmp_GtOpnStrtMpDtPltCrtgrphrM"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="plots"
+			label="Plots"
+		>
+			<menu
+				id="OpenStreetMap"
+				label="Open Street Map"
+			>
+				<entry
+					component="cmp_GtOpnStrtMpDtGtOpnStrtMpD"
+				/>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

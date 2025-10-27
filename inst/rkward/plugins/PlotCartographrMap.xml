@@ -1,0 +1,80 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="PlotCartographrMap.js" />
+	<help file="PlotCartographrMap.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Plot Cartographr Map">
+		<row id="row_vDSDSSCPSC">
+			<varselector id="plot_selector" />
+			<column id="clm_tDSDSSCPSC">
+				<tabbook>
+					<tab label="Data &amp; Style" id="tab_DataStyl">
+						<column id="clm_vrsltdpSCP">
+							<varslot id="plot_sf_object" label="Select the sf object" source="plot_selector" required="true" />
+							<dropdown id="plot_palette" label="Color Palette">
+								<option label="alphabet" value="alphabet" checked="true" />
+								<option label="arctic" value="arctic" />
+								<option label="autumn" value="autumn" />
+								<option label="bw" value="bw" />
+								<option label="desert" value="desert" />
+								<option label="evening" value="evening" />
+								<option label="gray" value="gray" />
+								<option label="iberia" value="iberia" />
+								<option label="imhof" value="imhof" />
+								<option label="lines" value="lines" />
+								<option label="metropolitan" value="metropolitan" />
+								<option label="midnight" value="midnight" />
+								<option label="minimal" value="minimal" />
+								<option label="swiss" value="swiss" />
+								<option label="tropical" value="tropical" />
+							</dropdown>
+						</column>
+					</tab>
+					<tab label="Labels" id="tab_Labels">
+						<column id="clm_inptPTSXYC">
+							<input label="Plot Title" id="title_input" />
+							<input label="Subtitle" id="subtitle_input" />
+							<input label="X-axis label" id="xlab_input" />
+							<input label="Y-axis label" id="ylab_input" />
+							<input label="Caption" id="caption_input" />
+						</column>
+					</tab>
+					<tab label="Output Device" id="tab_OutptDvc">
+						<column id="clm_dDPNGPNGSV">
+							<dropdown id="device_type" label="Device type">
+								<option label="PNG" value="PNG" checked="true" />
+								<option label="SVG" value="SVG" />
+								<option label="JPG" value="JPG" />
+							</dropdown>
+							<spinbox label="JPG Quality (0-100)" id="jpg_quality" initial="75" min="0" max="100" />
+							<spinbox label="Width (px)" id="dev_width" initial="720" min="100" max="4000" />
+							<spinbox label="Height (px)" id="dev_height" initial="720" min="100" max="4000" />
+							<spinbox label="Resolution (ppi)" id="dev_res" initial="125" min="50" max="600" />
+							<dropdown id="dev_bg" label="Background">
+								<option label="Transparent" value="transparent" checked="true" />
+								<option label="White" value="white" />
+							</dropdown>
+						</column>
+					</tab>
+				</tabbook>
+				<saveobject label="Save plot object to" checkable="true" checked="true" initial="cartographr.plot" id="plot_save_obj" />
+				<preview label="Preview" id="plot_preview" />
+			</column>
+		</row>
+	</dialog>
+</document>
