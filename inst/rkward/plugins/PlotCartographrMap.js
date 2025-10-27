@@ -46,9 +46,7 @@ function calculate(is_preview){
       code += "p <- p + ggplot2::labs(" + labs_list.join(", ") + ")\n";
     }
 
-    if (save_plot) {
-        code += save_plot_name + " <- p\n";
-    }
+    code += "cartographr.plot <- p\n";
     echo(code);
   
 }

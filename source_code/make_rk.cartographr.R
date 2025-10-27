@@ -18,7 +18,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin package for fetching and plotting OpenStreetMap data using the 'cartographr' library.",
-      version = "0.1.0",
+      version = "0.1.1",
       url = "https://github.com/AlfCano/rk.cartographr",
       license = "GPL (>= 3)"
     )
@@ -188,9 +188,7 @@ local({
       code += "p <- p + ggplot2::labs(" + labs_list.join(", ") + ")\\n";
     }
 
-    if (save_plot) {
-        code += save_plot_name + " <- p\\n";
-    }
+    code += "cartographr.plot <- p\\n";
     echo(code);
   '
 

@@ -21,7 +21,7 @@
 		shortinfo="An RKWard plugin package for fetching and plotting OpenStreetMap data using the 'cartographr' library."
 		longinfo="An RKWard plugin package for fetching and plotting OpenStreetMap data using the 'cartographr' library."
 		version="0.1.0"
-		releasedate="2025-10-26"
+		releasedate="2025-10-27"
 		url="https://github.com/AlfCano/rk.cartographr"
 		license="GPL (&gt;= 3)"
 	>

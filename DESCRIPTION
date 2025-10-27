@@ -3,7 +3,7 @@ Type: Package
 Title: An RKWard plugin package for fetching and plotting OpenStreetMap
         data using the 'cartographr' library.
 Version: 0.1.0
-Date: 2025-10-26
+Date: 2025-10-27
 Author: Alfonso Cano Robles
 Maintainer: Alfonso Cano Robles <alfonso.cano@correo.buap.mx>
 Enhances: rkward
