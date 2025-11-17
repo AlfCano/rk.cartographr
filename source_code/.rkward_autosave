@@ -82,14 +82,14 @@ local({
   custom_size_input <- rk.XML.input("Custom size (e.g., c(300, 300))", id.name="size_custom")
   main_save_object <- rk.XML.saveobj("Save sf object as", chk = TRUE, initial = "map", id.name = "main_save_obj")
 
-  # --- FINAL CORRECTED DIALOG: Using rk.XML.text for labels ---
+  # --- CORRECTED DIALOG: Using rk.XML.label and a simpler layout to avoid errors ---
   main_dialog_content <- rk.XML.dialog(
     label = "Get Open Street Map Data",
     child = rk.XML.col(
         rk.XML.frame(url_input, label = "Data Source"),
-        rk.XML.text("Dimensions"),
+        rk.XML.label("Dimensions"),
         rk.XML.row(x_dist_spin, y_dist_spin),
-        rk.XML.text("Output Size"),
+        rk.XML.label("Output Size"),
         rk.XML.row(size_dropdown, custom_size_input),
         main_save_object
     )
@@ -136,7 +136,7 @@ local({
     echo(r_commands);
   '
 
-  # Simplified help file, matching the working rk.dplyr example
+  # --- CORRECTED HELP: Simplified to match the rk.dplyr example exactly ---
   main_plugin_help <- rk.rkh.doc(
     title = rk.rkh.title("Get Open Street Map Data"),
     summary = rk.rkh.summary("Fetches map data from OpenStreetMap based on a specific URL and dimensions, creating an 'sf' object for further analysis and plotting.")
@@ -197,7 +197,7 @@ local({
     echo(code);
   '
 
-  # Simplified help file, matching the working rk.dplyr example
+  # --- CORRECTED HELP: Simplified to match the rk.dplyr example exactly ---
   plot_component_help <- rk.rkh.doc(
     title = rk.rkh.title("Plot Cartographr Map"),
     summary = rk.rkh.summary("Generates a map plot from an 'sf' object created by the 'Get Open Street Map Data' plugin.")
