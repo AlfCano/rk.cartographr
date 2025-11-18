@@ -1,7 +1,7 @@
 
 # rk.cartographr
 
-![Version](https://img.shields.io/badge/version-0.1.1-blue.svg)
+![Version](https://img.shields.io/badge/version-0.1.2-blue.svg)
 
 An RKWard plugin package for creating beautiful maps using the `cartographr` R package. This plugin provides a graphical user interface (GUI) to fetch data from OpenStreetMap and generate customizable map plots directly within RKWard.
 
